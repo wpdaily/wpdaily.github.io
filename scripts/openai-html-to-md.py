@@ -14,16 +14,19 @@ openai.api_base = os.getenv("API_BASE")
 openai.api_version = os.getenv("API_VERSION")
 openai.api_key = os.getenv("API_KEY")
 
+# Get the directory of this script
+script_directory = os.path.dirname(os.path.realpath(__file__))
+
 # system prompt
-with open('utilities/oai-system-prompt.txt') as f:
+with open(script_directory + '/utilities/oai-system-prompt.txt') as f:
     system_prompt = f.read()
 
 # user prompt mask
-with open('utilities/oai-user-prompt-mask.txt') as f:
+with open(script_directory + '/utilities/oai-user-prompt-mask.txt') as f:
     user_prompt_mask = f.read()
 
 # Get all html files from html_input directory
-html_files = glob.glob('html_input/*.html')
+html_files = glob.glob(script_directory + '/html_input/*.html')
 
 if not html_files:
     print("No HTML files found in html_input directory.")
@@ -52,8 +55,8 @@ for html_file_path in html_files:
 
     # Write to file
     filename = os.path.basename(html_file_path).replace(".html", "")
-    with open("../md/" + filename + ".md", "w") as f:
+    with open(script_directory + "/../md/" + filename + ".md", "w") as f:
         f.write(response.choices[0].message.content)
 
 # Execute generate-md-index.py
-os.system("python3 generate-md-index.py")
+os.system("python3 " + script_directory + "/generate-md-index.py")

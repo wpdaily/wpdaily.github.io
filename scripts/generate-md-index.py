@@ -1,7 +1,10 @@
 import os
 
+# Get the directory of this script
+script_directory = os.path.dirname(os.path.realpath(__file__))
+
 # Get the list of files in the directory
-files = os.listdir('../md/')
+files = os.listdir(script_directory + '/../md/')
 
 # Sort the files in descending order
 files.sort(reverse=True)
@@ -20,7 +23,7 @@ for file in files:
 
 # Now we write the hyperlinks to the readme file
 
-with open('../readme.md', 'w') as f:
+with open(script_directory + '/../readme.md', 'w') as f:
     f.write("# 白纸行动日报 White Paper Daily\n\n")
     for link in hyperlinks:
         f.write(f"{link}\n\n")
