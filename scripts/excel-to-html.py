@@ -9,7 +9,7 @@ script_directory = os.path.dirname(os.path.realpath(__file__))
 
 # Define the source and destination directories
 src_directory = script_directory + '/../excel/'
-dst_directory = script_directory + '/../html/'
+dst_directory = script_directory + '/../excel/html/'
 
 # Get all the files in the source directory
 files = os.listdir(src_directory)
@@ -18,11 +18,11 @@ files = os.listdir(src_directory)
 html_files = []
 
 # Get HTML template header
-with open(script_directory + '/../html/template/single_h.html', 'r') as f:
+with open(script_directory + '/../excel/html/template/single_h.html', 'r') as f:
     header = f.read()
 
 # Get HTML template footer
-with open(script_directory + '/../html/template/single_f.html', 'r') as f:
+with open(script_directory + '/../excel/html/template/single_f.html', 'r') as f:
     footer = f.read()
 
 for file in files:
@@ -88,5 +88,5 @@ template = Template(index_template)
 rendered_html = template.render(data=data)
 
 # Write the rendered HTML to the index.html file
-with open(script_directory + '/../html/index.html', 'w') as f:
+with open(script_directory + '/../excel/html/index.html', 'w') as f:
     f.write(rendered_html)
