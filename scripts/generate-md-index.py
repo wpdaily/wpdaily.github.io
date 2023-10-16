@@ -24,6 +24,13 @@ for file in files:
 # Now we write the hyperlinks to the readme file
 
 with open(script_directory + '/../readme.md', 'w') as f:
-    f.write("# 白纸行动日报 White Paper Daily\n\n")
+    f.write("# 白纸行动日报 White Paper Daily\n\n"
+            "抗议行动的每日简要整理，关注即是力量。\n\n"
+            "- Mastodon: [@whitepaperdaily@mstdn.social](https://mstdn.social/@whitepaperdaily)\n"
+            "- 网站: [https://whitepaperdaily.wordpress.com](https://whitepaperdaily.wordpress.com/)\n"
+            "- Git: [GitHub](https://github.com/wpdaily/white-paper-daily/)\n"
+            "- 投稿: [CryptPad](https://cryptpad.fr/form/#/2/form/view/cte4PXjIT6AxP-9V+mpEd6708q57aGYip+tuK7tr+FE/)\n"
+            "\n\n"
+            "# 目录\n\n")
     for link in hyperlinks:
         f.write(f"{link}\n\n")
