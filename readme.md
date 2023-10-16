@@ -1,5 +1,17 @@
 # 白纸行动日报 White Paper Daily
 
+抗议行动的每日简要整理，关注即是力量。
+
+- Mastodon: [@whitepaperdaily@mstdn.social](https://mstdn.social/@whitepaperdaily)
+- 网站: [https://whitepaperdaily.wordpress.com](https://whitepaperdaily.wordpress.com/)
+- Git: [GitHub](https://github.com/wpdaily/white-paper-daily/)
+- 投稿: [CryptPad](https://cryptpad.fr/form/#/2/form/view/cte4PXjIT6AxP-9V+mpEd6708q57aGYip+tuK7tr+FE/)
+
+
+# 目录
+
+[白纸-20231009至20231015周报](md/白纸-20231009至20231015周报.md)
+
 [白纸-20231002至20231008周报](md/白纸-20231002至20231008周报.md)
 
 [白纸-20230925至20231001周报](md/白纸-20230925至20231001周报.md)
