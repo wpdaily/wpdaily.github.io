@@ -1,4 +1,4 @@
 scripts/.env
-scripts/html_input/
+backup/scripts_deprecated/html_input/
 .idea/
 venv/
